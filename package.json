@@ -1,0 +1,18 @@
+{
+  "name": "do-portfolio",
+  "version": "0.0.0",
+  "description": "Webcomponent do-portfolio following open-wc recommendations",
+  "author": "do-portfolio",
+  "license": "MIT",
+  "scripts": {
+    "start": "web-dev-server"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "lit-element": "^2.5.1",
+    "lit-html": "^1.4.1"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.17"
+  }
+}
