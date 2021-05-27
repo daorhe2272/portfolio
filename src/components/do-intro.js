@@ -62,6 +62,8 @@ export class Intro extends LitElement {
         text-align: center;
         margin: 5px 8px;
         font-family: "Roboto", "Open Sans", sans-serif;
+        text-decoration: none;
+        color: white;
       }
 
       .link-item:hover {
@@ -112,9 +114,9 @@ export class Intro extends LitElement {
           <span>Developer</span>
         </div>
         <div class="intro-links">
-          <a class="link-item">Github</a>
-          <a class="link-item">Xing</a>
-          <a class="link-item">CV</a>
+          <a class="link-item" href="https://github.com/daorhe2272">Github</a>
+          <a class="link-item" href="https://www.xing.com/profile/David_Orozco4/cv">Xing</a>
+          <a class="link-item" href="/src/assets/CV.pdf">CV</a>
         </div>
       </div>
     `;
