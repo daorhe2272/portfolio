@@ -99,12 +99,12 @@ export class Header extends LitElement {
     return html`
       <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
       <div class="header-horizontal">
-        <div class="header-item" @click="${this.scrollToElem("intro")}">Intro</div>
-        <div class="header-item">Skills</div>
-        <div class="header-item">Projects</div>
+        <div class="header-item" @click="${() => {this.scrollToElem("intro")}}">Intro</div>
+        <div class="header-item" @click="${() => {this.scrollToElem("skills")}}">Skills</div>
+        <div class="header-item" @click="${() => {this.scrollToElem("projects")}}">Projects</div>
         <div class="header-item">Timeline</div>
         <div class="header-item">Contact</div>
-        <div class="header-item" @click="${window.location.href='/src/assets/CV.pdf'}">CV</div>
+        <div class="header-item" @click="${this.goToUrl}">CV</div>
       </div>
       <div class="header-vertical">
         <div class="header-item">Intro</div>
@@ -130,7 +130,11 @@ export class Header extends LitElement {
   }
 
   scrollToElem(id) {
-    let el = document.getElementById(id);
-    console.log(el);
+    let el = document.getElementById("root").shadowRoot.querySelector("#" + id);
+    el.scrollIntoView();
+  }
+
+  goToUrl() {
+    window.location.href='/src/assets/CV.pdf';
   }
 }
