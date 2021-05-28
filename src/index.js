@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 
+import { PopUp } from "./components/do-popup.js";
 import { Header } from "./components/do-header.js";
 import { Intro } from "./components/do-intro.js";
 import { Welcome } from "./components/do-welcome.js";
@@ -21,6 +22,7 @@ export class Portfolio extends LitElement {
 
   render() {
     return html`
+      <do-popup></do-popup>
       <do-header></do-header>
       <do-intro></do-intro>
       <do-welcome id="intro"></do-welcome>
@@ -33,6 +35,7 @@ export class Portfolio extends LitElement {
   }
 }
 
+customElements.define("do-popup", PopUp);
 customElements.define("do-header", Header);
 customElements.define("do-intro", Intro);
 customElements.define("do-welcome", Welcome);

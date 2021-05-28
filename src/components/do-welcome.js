@@ -46,7 +46,7 @@ export class Welcome extends LitElement {
         <div class="text-header">Hi, I'm David
           <div class="text">
             I'm a philosopher turned developer<br>
-            Currently living in Germany<br>
+            Currently living in France<br>
             Passionate about problem solving<br>
             Avid and rapid learner</div>
         </div>

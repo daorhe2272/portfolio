@@ -10,6 +10,8 @@ export class Header extends LitElement {
         color: white;
         display: flex;
         font-family: "Open Sans", "Roboto", sans-serif;
+        position: fixed;
+        z-index: 9;
       }
 
       @media only screen and (min-width: 601px) {
@@ -74,7 +76,6 @@ export class Header extends LitElement {
           display: none;
           flex-direction: column;
           top: 52px;
-          z-index: 9;
           max-height: 0px;
           overflow: hidden;
           transition: max-height 0.4s ease;
@@ -107,12 +108,12 @@ export class Header extends LitElement {
         <div class="header-item" @click="${this.goToUrl}">CV</div>
       </div>
       <div class="header-vertical">
-        <div class="header-item">Intro</div>
-        <div class="header-item">Skills</div>
-        <div class="header-item">Projects</div>
+        <div class="header-item" @click="${() => {this.scrollToElem("intro")}}">Intro</div>
+        <div class="header-item" @click="${() => {this.scrollToElem("skills")}}">Skills</div>
+        <div class="header-item" @click="${() => {this.scrollToElem("projects")}}">Projects</div>
         <div class="header-item">Timeline</div>
         <div class="header-item">Contact</div>
-        <div class="header-item">CV</div>
+        <div class="header-item" @click="${this.goToUrl}">CV</div>
       </div>
       <i class="fas fa-bars" alt="Menu for mobile view" @click="${this.showVerticalMenu}"></i>
     `;
@@ -135,6 +136,6 @@ export class Header extends LitElement {
   }
 
   goToUrl() {
-    window.location.href='/src/assets/CV.pdf';
+    window.open('/src/assets/CV.pdf');
   }
 }

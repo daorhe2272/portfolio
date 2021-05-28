@@ -29,9 +29,19 @@ export class Projects extends LitElement {
       .p-item {
         margin: 15px 15px;
         display: flex;
-        flex-direction: column;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        flex-wrap: wrap;
+      }
+
+      .i-contents {
+        display: flex;
+        flex-direction: column;
         max-width: 550px;
+      }
+
+      .i-description {
+        background-color: grey;
+        display: none;
       }
 
       img {
@@ -54,6 +64,7 @@ export class Projects extends LitElement {
         width: 100%;
         justify-content: center;
         margin: 8px 0;
+        flex-wrap: wrap;
       }
 
       .p-button {
@@ -84,42 +95,80 @@ export class Projects extends LitElement {
       <div class="title">Projects</div>
       <div class="p-container">
         <div class="p-item">
-          <img src="/src/assets/lists.PNG">
-          <div class="p-t-title">Awesome Lists</div>
-          <div class="p-buttons">
-            <a class="p-button" href="https://github.com/daorhe2272/lists" target="_blank">GitHub</a>
-            <a class="p-button">Website*</a>
-            <a class="p-button">Description</a>
+          <div class="i-contents">
+            <img src="/src/assets/lists.PNG">
+            <div class="p-t-title">Awesome Lists</div>
+            <div class="p-buttons">
+              <a class="p-button" href="https://github.com/daorhe2272/lists" target="_blank">GitHub</a>
+              <a class="p-button" @click="${() => {this.showMessage("Website Not Available", "This application has not been currently deployed and, therefore, is not available online.")}}">Website*</a>
+              <a class="p-button" @click="${() => {this.showDescription('Awesome Lists')}}">Description</a>
+            </div>
+          </div>
+          <div class="i-description">
+            <div class="d-idea">Idea</div>
           </div>
         </div>
         <div class="p-item">
-          <img src="/src/assets/extra.webp">
-          <div class="p-t-title">Distribuidora Extra</div>
-          <div class="p-buttons">
-            <a class="p-button">GitHub*</a>
-            <a class="p-button" href="https://www.distribuidoraextracali.com" target="_blank">Website</a>
-            <a class="p-button">Description</a>
+          <div class="i-contents">
+            <img src="/src/assets/extra.webp">
+            <div class="p-t-title">Distribuidora Extra</div>
+            <div class="p-buttons">
+              <a class="p-button" @click="${() => {this.showMessage("Private Repository", "This is a private repository. Please refer to the <a href='' style='color: blue; text-decoration: none;'>Contact</a> section of my portfolio to contact me and request access.")}}">GitHub*</a>
+              <a class="p-button" href="https://www.distribuidoraextracali.com" target="_blank">Website</a>
+              <a class="p-button" @click="${() => {this.showDescription('Distribuidora Extra')}}">Description</a>
+            </div>
           </div>
+          <div class="i-description"></div>
         </div>
         <div class="p-item">
-          <img src="/src/assets/ihub.PNG">
-          <div class="p-t-title">idea-hub.net</div>
-          <div class="p-buttons">
-            <a class="p-button">GitHub*</a>
-            <a class="p-button" href="https://www.idea-hub.net" target="_blank">Website</a>
-            <a class="p-button">Description</a>
+          <div class="i-contents">
+            <img src="/src/assets/ihub.PNG">
+            <div class="p-t-title">idea-hub.net</div>
+            <div class="p-buttons">
+              <a class="p-button" @click="${() => {this.showMessage("Private Repository", "This is a private repository. Please refer to the <a href='' style='color: blue; text-decoration: none;'>Contact</a> section of my portfolio to contact me and request access.")}}">GitHub*</a>
+              <a class="p-button" href="https://www.idea-hub.net" target="_blank">Website</a>
+              <a class="p-button" @click="${() => {this.showDescription('idea-hub.net')}}">Description</a>
+            </div>
           </div>
+          <div class="i-description"></div>
         </div>
         <div class="p-item">
-          <img src="/src/assets/portfolio.PNG">
-          <div class="p-t-title">David's Portfolio</div>
-          <div class="p-buttons">
-            <a class="p-button" href="https://github.com/daorhe2272/portfolio" target="_blank">GitHub</a>
-            <a class="p-button" target="_blank">Website</a>
-            <a class="p-button">Description</a>
+          <div class="i-contents">
+            <img src="/src/assets/portfolio.PNG">
+            <div class="p-t-title">David's Portfolio</div>
+            <div class="p-buttons">
+              <a class="p-button" href="https://github.com/daorhe2272/portfolio" target="_blank">GitHub</a>
+              <a class="p-button" target="_blank">Website</a>
+              <a class="p-button" @click="${() => {this.showDescription("David's Portfolio")}}">Description</a>
+            </div>
           </div>
+          <div class="i-description"></div>
         </div>
       </div>
     `;
+  }
+
+  showMessage(title, text) {
+    let el = document.getElementById("root").shadowRoot.querySelector("do-popup");
+    let titleDiv = el.shadowRoot.querySelector(".title");
+    let textDiv = el.shadowRoot.querySelector(".message");
+    el.style.display = "flex";
+    titleDiv.innerHTML = title;
+    textDiv.innerHTML = text;
+  }
+
+  showDescription(id) {
+    let el = this.shadowRoot.querySelectorAll(".p-item");
+    for (let i = 0; i < el.length; i++) {
+      let title = el[i].querySelector(".p-t-title").innerHTML;
+      let description = el[i].querySelector(".i-description");
+      let content = el[i].querySelector(".i-contents");
+      if (title === id && description.style.display === "flex") {
+        description.style.display = "none";
+      } else if (title === id) {
+        description.style.display = "flex";
+        description.style.width = content.offsetWidth + 30 + "px";
+      }
+    }
   }
 }

@@ -3,6 +3,10 @@ import { LitElement, html, css } from "lit-element";
 export class Intro extends LitElement {
   static get styles() {
     return css`
+      :host {
+        margin-top: 52px;
+      }
+
       .intro-wrapper {
         display: flex;
         flex-direction: column;
@@ -114,9 +118,9 @@ export class Intro extends LitElement {
           <span>Developer</span>
         </div>
         <div class="intro-links">
-          <a class="link-item" href="https://github.com/daorhe2272">Github</a>
-          <a class="link-item" href="https://www.xing.com/profile/David_Orozco4/cv">Xing</a>
-          <a class="link-item" href="/src/assets/CV.pdf">CV</a>
+          <a class="link-item" href="https://github.com/daorhe2272" target="_blank">Github</a>
+          <a class="link-item" href="https://www.xing.com/profile/David_Orozco4/cv" target="_blank">Xing</a>
+          <a class="link-item" href="/src/assets/CV.pdf" target="_blank">CV</a>
         </div>
       </div>
     `;
