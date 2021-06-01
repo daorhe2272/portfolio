@@ -7,6 +7,8 @@ import { Welcome } from "./components/do-welcome.js";
 import { Separator } from "./components/do-separator.js";
 import { Skills } from "./components/do-skills.js";
 import { Projects } from "./components/do-projects.js";
+import { Contact } from "./components/do-contact.js";
+import { Footer } from "./components/do-footer.js";
 
 export class Portfolio extends LitElement {
   static get styles() {
@@ -31,6 +33,8 @@ export class Portfolio extends LitElement {
       <do-separator></do-separator>
       <do-projects id="projects"></do-projects>
       <do-separator></do-separator>
+      <do-contact></do-contact>
+      <do-footer></do-footer>
     `;
   }
 }
@@ -42,3 +46,5 @@ customElements.define("do-welcome", Welcome);
 customElements.define("do-separator", Separator);
 customElements.define("do-skills", Skills);
 customElements.define("do-projects", Projects);
+customElements.define("do-contact", Contact);
+customElements.define("do-footer", Footer);

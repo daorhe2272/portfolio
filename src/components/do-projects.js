@@ -40,8 +40,24 @@ export class Projects extends LitElement {
       }
 
       .i-description {
-        background-color: grey;
         display: none;
+        flex-direction: column;
+        padding: 15px;
+      }
+
+      .small-title {
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: Navy;
+        font-size: 1.1rem;
+        width: 100%;
+      }
+
+      .d-text {
+        margin-bottom: 18px;
+        font-family: "Open Sans", sans-serif;
+        display: flex;
+        flex-direction: column;
       }
 
       img {
@@ -105,7 +121,9 @@ export class Projects extends LitElement {
             </div>
           </div>
           <div class="i-description">
-            <div class="d-idea">Idea</div>
+            <div class="d-text"><div class="small-title">Idea</div>When Wunderlist was bought by Microsoft and subsequently removed from the PlayStore, it left a gap that was not filled up until recently. There were no user-friendly applications available. I used to share lists with my family, but we stopped doing it because they found other applications unpractical. At the same time, I wanted to learn how to create Single Page Applications with React, so I began working on this small project during my free time. That is, a simple-to-use ToDo list application.</div>
+            <div class="d-text"><div class="small-title">Technology Stack</div>React, Node.js, Express, GraphQL, MongoDB, Apollo Server</div>
+            <div class="d-text"><div class="small-title">Challenges</div>At the beginning, working with web components was a breeze: designing the application with isolated components felt like a great idea. However, complexities quickly arised when trying to exchange data or functions between components. Luckily, there is a vast amount of resources online to learn the most difficult aspects of working with React. Another tough spot was working with GraphQL, since this query language fails sometimes in telling you the source of an error. To solve this type of errors, I needed a great deal of trial and error. Nevertheless, working with GraphQL became much easier after learning the most common causes of errors and how to solve them.<br>Another aspect of working with React that is usually challenging, is state management. However, I employed the new version of Apollo Server for this application. I was able to use its new feature, Reactive Variables, which made the process of managing the app's state much simpler and straightforward.</div>
           </div>
         </div>
         <div class="p-item">
@@ -118,7 +136,11 @@ export class Projects extends LitElement {
               <a class="p-button" @click="${() => {this.showDescription('Distribuidora Extra')}}">Description</a>
             </div>
           </div>
-          <div class="i-description"></div>
+          <div class="i-description">
+            <div class="d-text"><div class="small-title">Idea</div>During my 4-months stay in my hometown, Cali, I decided to employ my skills to help my family's logistics-based business. First, I took ownership of all of the business' hosts and domains that were previously in the hands of third party service providers. Then I created a more modern and functional landing page than the ones that were in place and replaced them. I made all URLs to redirect to the main landing page. I included more information regarding the business activities plus products overview, a slider to advertise offers, more detailed contact details and a Google Maps widget with the business location. After deploying and testing the website, I worked on automating reporting and data analysis processes with Python scripts. I run these scripts monthly and send back the reports. To be able to do so, I had to set up a VPN connection and a Unix client in my laptop to communicate with the company's local server.</div>
+            <div class="d-text"><div class="small-title">Technology Stack</div>Node.js, Pug Templates, Python (Numpy & Pandas)</div>
+            <div class="d-text"><div class="small-title">Challenges</div>Although these tasks were time consuming in nature, I did not meet particularly difficult challenges. However, I had to learn a lot in the process. I did not know how to create a Google Maps widget, create Excel reports with Pyhton, set up a VPN connection, or how to set up a Unix client in a Windows computer. Luckily, it was easy to find instructions and tutorials online on how to complete all these tasks.</div>
+          </div>
         </div>
         <div class="p-item">
           <div class="i-contents">
@@ -130,7 +152,11 @@ export class Projects extends LitElement {
               <a class="p-button" @click="${() => {this.showDescription('idea-hub.net')}}">Description</a>
             </div>
           </div>
-          <div class="i-description"></div>
+          <div class="i-description">
+            <div class="d-text"><div class="small-title">Idea</div>In 2020 I was in Liverpool, waiting for my wife to finish her studies. The pandemic hit in March so I was pretty much stuck there. I decided to spend my time by working in an idea I already had: creating a social network for entrepreneurs so they can collaborate, exchange useful information and help each other achieve their goals.</div>
+            <div class="d-text"><div class="small-title">Technology Stack</div>Node.js, Express, MongoDB, RESTful</div>
+            <div class="d-text"><div class="small-title">Challenges</div>From the beginning my intention was to create a Minimum Viable Product that would work in the real-world. Consequently, I designed every functionality with great detail taking into consideration its easy of use, security, and reliability. The functionalities were, at the same time, numerous and diverse in nature. To have a Minimum Viable Product, I had to add several functionalities such as user authentication, password recovery, password change, profile editing, sharing of information, posts editing, commenting, bookmarking, reporting of offensive content, among others.<br>However, the biggest challenge I found was when I deployed my application and began receiving feedback: I soon realized that I needed to design a much more complex application in order to gain traction. Entrepreneurs can already exhange information with great ease at social networks like Reddit, Twitter or Quora. In order to offer a differentiated product, I needed to create an ecosystem with the other functionalities I had in mind. That, however, takes time, which I hope to have someday.</div>
+          </div>
         </div>
         <div class="p-item">
           <div class="i-contents">
@@ -142,7 +168,11 @@ export class Projects extends LitElement {
               <a class="p-button" @click="${() => {this.showDescription("David's Portfolio")}}">Description</a>
             </div>
           </div>
-          <div class="i-description"></div>
+          <div class="i-description">
+            <div class="d-text"><div class="small-title">Idea</div>The idea here is pretty straightforward: to have a public portfolio where I can show the projects I have worked on in detail. I also took the creation of this portfolio as an opportunity to get hands-on experience working with web components.</div>
+            <div class="d-text"><div class="small-title">Technology Stack</div>Web Components, Web-Dev-Server, Node.js, Lit (from Google's Polymer project)</div>
+            <div class="d-text"><div class="small-title">Challenges</div>Working with web components was fun and edifying. Learning the basic concepts and starting out was not particularly difficult. The most challenging part, if at all, was working around the encapsulation created by the shadow DOM. However, it is worth mentioning that a portfolio website is very different from a large web application. Managing the interactivity and state of a complex web application would require advanced solutions like creating a customized Event Bus or, even better, a state management library like Redux.</div>
+          </div>
         </div>
       </div>
     `;
@@ -167,7 +197,10 @@ export class Projects extends LitElement {
         description.style.display = "none";
       } else if (title === id) {
         description.style.display = "flex";
-        description.style.width = content.offsetWidth + 30 + "px";
+        console.log(document.body.clientWidth);
+        if (document.body.clientWidth > 1130) {
+          description.style.width = content.offsetWidth + 0 + "px";
+        }
       }
     }
   }
