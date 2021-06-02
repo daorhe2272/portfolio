@@ -104,15 +104,15 @@ export class Header extends LitElement {
         <div class="header-item" @click="${() => {this.scrollToElem("skills")}}">Skills</div>
         <div class="header-item" @click="${() => {this.scrollToElem("projects")}}">Projects</div>
         <div class="header-item">Timeline</div>
-        <div class="header-item">Contact</div>
+        <div class="header-item" @click="${() => {this.scrollToElem("contact")}}">Contact</div>
         <div class="header-item" @click="${this.goToUrl}">CV</div>
       </div>
       <div class="header-vertical">
-        <div class="header-item" @click="${() => {this.scrollToElem("intro")}}">Intro</div>
-        <div class="header-item" @click="${() => {this.scrollToElem("skills")}}">Skills</div>
-        <div class="header-item" @click="${() => {this.scrollToElem("projects")}}">Projects</div>
+        <div class="header-item" @click="${() => {this.scrollToElem("intro"); this.hideVerticalMenu();}}">Intro</div>
+        <div class="header-item" @click="${() => {this.scrollToElem("skills"); this.hideVerticalMenu();}}">Skills</div>
+        <div class="header-item" @click="${() => {this.scrollToElem("projects"); this.hideVerticalMenu();}}">Projects</div>
         <div class="header-item">Timeline</div>
-        <div class="header-item">Contact</div>
+        <div class="header-item" @click="${() => {this.scrollToElem("contact"); this.hideVerticalMenu();}}">Contact</div>
         <div class="header-item" @click="${this.goToUrl}">CV</div>
       </div>
       <i class="fas fa-bars" alt="Menu for mobile view" @click="${this.showVerticalMenu}"></i>
@@ -130,9 +130,17 @@ export class Header extends LitElement {
     }
   }
 
+  hideVerticalMenu() {
+    let el = this.shadowRoot.querySelector(".header-vertical");
+    el.style.display = "none";
+    el.style.maxHeight = "0px";
+  }
+
   scrollToElem(id) {
     let el = document.getElementById("root").shadowRoot.querySelector("#" + id);
-    el.scrollIntoView();
+    // Get how much the user has scrolled so far plus relative position of target element minus header height
+    let distanceToTop = window.pageYOffset + el.getBoundingClientRect().top - this.offsetHeight;
+    window.scrollTo(0, distanceToTop);
   }
 
   goToUrl() {

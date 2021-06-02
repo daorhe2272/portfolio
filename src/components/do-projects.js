@@ -131,7 +131,7 @@ export class Projects extends LitElement {
             <img src="/src/assets/extra.webp">
             <div class="p-t-title">Distribuidora Extra</div>
             <div class="p-buttons">
-              <a class="p-button" @click="${() => {this.showMessage("Private Repository", "This is a private repository. Please refer to the <a href='' style='color: blue; text-decoration: none;'>Contact</a> section of my portfolio to contact me and request access.")}}">GitHub*</a>
+              <a class="p-button" @click="${() => {this.showMessage("Private Repository", "This is a private repository. Please refer to the <a href='#contact' onclick='window.scrollTo(0, document.body.scrollHeight);' style='color: blue; text-decoration: none;'>Contact</a> section of my portfolio to contact me and request access.")}}">GitHub*</a>
               <a class="p-button" href="https://www.distribuidoraextracali.com" target="_blank">Website</a>
               <a class="p-button" @click="${() => {this.showDescription('Distribuidora Extra')}}">Description</a>
             </div>
@@ -147,7 +147,7 @@ export class Projects extends LitElement {
             <img src="/src/assets/ihub.PNG">
             <div class="p-t-title">idea-hub.net</div>
             <div class="p-buttons">
-              <a class="p-button" @click="${() => {this.showMessage("Private Repository", "This is a private repository. Please refer to the <a href='' style='color: blue; text-decoration: none;'>Contact</a> section of my portfolio to contact me and request access.")}}">GitHub*</a>
+              <a class="p-button" @click="${() => {this.showMessage("Private Repository", "This is a private repository. Please refer to the <a href='#contact' onclick='window.scrollTo(0, document.body.scrollHeight);' style='color: blue; text-decoration: none;'>Contact</a> section of my portfolio to contact me and request access.")}}">GitHub*</a>
               <a class="p-button" href="https://www.idea-hub.net" target="_blank">Website</a>
               <a class="p-button" @click="${() => {this.showDescription('idea-hub.net')}}">Description</a>
             </div>

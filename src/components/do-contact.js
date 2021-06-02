@@ -38,11 +38,14 @@ export class Contact extends LitElement {
         margin: 12px 0;
       }
 
-      i {
+      a {
         margin: 0 8px;
         cursor: pointer;
         padding: 5px;
+        text-decoration: none;
+        color: Navy;
       }
+
     `;
   }
 
@@ -53,10 +56,10 @@ export class Contact extends LitElement {
       <div class="container">
         <div class="text">Do you have any project you would like to discuss? Are you looking for a new member for your team? Is there anything else you would like to know? You can reach me through any of the channels below.</div>
         <div class="icons">
-          <i class="fas fa-envelope"></i>
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-xing-square"></i>
-          <i class="fab fa-github"></i>
+          <a class="fas fa-envelope" href="mailto:daorhe2272@hotmail.com" title="Email: daorhe2272@hotmail.com"></a>
+          <a class="fab fa-linkedin" href="https://www.linkedin.com/in/david-orozco-100332162/" target="_blank" title="Link to my LinkedIn account"></a>
+          <a class="fab fa-xing-square" href="https://www.xing.com/profile/David_Orozco4" target="_blank" title="Link to my Xing account"></a>
+          <a class="fab fa-github" href="https://github.com/daorhe2272" target="_blank" title="Link to my GitHub account"></a>
         </div>
       </div>
     `;

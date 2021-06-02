@@ -33,7 +33,7 @@ export class Portfolio extends LitElement {
       <do-separator></do-separator>
       <do-projects id="projects"></do-projects>
       <do-separator></do-separator>
-      <do-contact></do-contact>
+      <do-contact id="contact"></do-contact>
       <do-footer></do-footer>
     `;
   }
