@@ -15,7 +15,7 @@ export class Skills extends LitElement {
         font-size: 2.5rem;
         font-weight: bold;
         color: Navy;
-        font-family: "Open Sans";
+        font-family: "Open Sans", sans-serif;
         margin: 10px 0;
       }
 
