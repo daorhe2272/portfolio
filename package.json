@@ -5,14 +5,18 @@
   "author": "do-portfolio",
   "license": "MIT",
   "scripts": {
-    "start": "web-dev-server"
+    "start": "web-dev-server",
+    "build": "rollup ./src/index.js --file bundle.js --format iife"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "lit-element": "^2.5.1",
-    "lit-html": "^1.4.1"
+    "lit-html": "^1.4.1",
+    "rollup": "^2.50.6"
   },
   "devDependencies": {
-    "@web/dev-server": "^0.1.17"
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "@web/dev-server": "^0.1.17",
+    "@web/rollup-plugin-html": "^1.7.0"
   }
 }
