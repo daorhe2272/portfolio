@@ -6,6 +6,8 @@
 .DS_Store
 
 ## npm
+/node_modules/*
+!/node_modules/@fortawesome/
 /node_modules/
 /npm-debug.log
 
