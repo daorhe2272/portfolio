@@ -144,6 +144,6 @@ export class Header extends LitElement {
   }
 
   goToUrl() {
-    window.open('/src/assets/CV.pdf');
+    window.open('/src/assets/David Orozco - CV.pdf');
   }
 }

@@ -2767,7 +2767,7 @@ class Header extends LitElement {
   }
 
   goToUrl() {
-    window.open('/src/assets/CV.pdf');
+    window.open('/src/assets/David Orozco - CV.pdf');
   }
 }
 
@@ -2891,7 +2891,7 @@ class Intro extends LitElement {
         <div class="intro-links">
           <a class="link-item" href="https://github.com/daorhe2272" target="_blank">Github</a>
           <a class="link-item" href="https://www.xing.com/profile/David_Orozco4/cv" target="_blank">Xing</a>
-          <a class="link-item" href="/src/assets/CV.pdf" target="_blank">CV</a>
+          <a class="link-item" href="/src/assets/David Orozco - CV.pdf" target="_blank">CV</a>
         </div>
       </div>
     `;
@@ -3223,7 +3223,7 @@ class Projects extends LitElement {
             <div class="p-t-title">David's Portfolio</div>
             <div class="p-buttons">
               <a class="p-button" href="https://github.com/daorhe2272/portfolio" target="_blank">GitHub</a>
-              <a class="p-button" target="_blank">Website</a>
+              <a class="p-button" href="https://david-orozco.info" target="_blank">Website</a>
               <a class="p-button" @click="${() => {this.showDescription("David's Portfolio");}}">Description</a>
             </div>
           </div>

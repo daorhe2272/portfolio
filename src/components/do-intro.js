@@ -120,7 +120,7 @@ export class Intro extends LitElement {
         <div class="intro-links">
           <a class="link-item" href="https://github.com/daorhe2272" target="_blank">Github</a>
           <a class="link-item" href="https://www.xing.com/profile/David_Orozco4/cv" target="_blank">Xing</a>
-          <a class="link-item" href="/src/assets/CV.pdf" target="_blank">CV</a>
+          <a class="link-item" href="/src/assets/David Orozco - CV.pdf" target="_blank">CV</a>
         </div>
       </div>
     `;

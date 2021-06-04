@@ -5,8 +5,7 @@
   "author": "do-portfolio",
   "license": "MIT",
   "scripts": {
-    "start": "web-dev-server",
-    "build": "rollup ./src/index.js --file bundle.js --format iife"
+    "start": "web-dev-server"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",

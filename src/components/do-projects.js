@@ -164,7 +164,7 @@ export class Projects extends LitElement {
             <div class="p-t-title">David's Portfolio</div>
             <div class="p-buttons">
               <a class="p-button" href="https://github.com/daorhe2272/portfolio" target="_blank">GitHub</a>
-              <a class="p-button" target="_blank">Website</a>
+              <a class="p-button" href="https://david-orozco.info" target="_blank">Website</a>
               <a class="p-button" @click="${() => {this.showDescription("David's Portfolio")}}">Description</a>
             </div>
           </div>
