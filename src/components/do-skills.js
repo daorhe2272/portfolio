@@ -52,6 +52,7 @@ export class Skills extends LitElement {
         <div class="mini-title">Languagues
           <div class="skillz">
             <div class="skill">JavaScript</div>
+            <div class="skill">TypeScript</div>
             <div class="skill">HTML</div>
             <div class="skill">CSS</div>
             <div class="skill">Python</div>
@@ -63,6 +64,7 @@ export class Skills extends LitElement {
             <div class="skill">React</div>
             <div class="skill">Web Components</div>
             <div class="skill">SQL & NoSQL DBs</div>
+            <div class="skill">GraphQL</div>
             <div class="skill">RESTful APIs</div>
             <div class="skill">Git & GitHub</div>
           </div>

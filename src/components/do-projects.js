@@ -112,22 +112,6 @@ export class Projects extends LitElement {
       <div class="p-container">
         <div class="p-item">
           <div class="i-contents">
-            <img src="/src/assets/lists.PNG">
-            <div class="p-t-title">Awesome Lists</div>
-            <div class="p-buttons">
-              <a class="p-button" href="https://github.com/daorhe2272/lists" target="_blank">GitHub</a>
-              <a class="p-button" @click="${() => {this.showMessage("Website Not Available", "This application has not been currently deployed and, therefore, is not available online.")}}">Website*</a>
-              <a class="p-button" @click="${() => {this.showDescription('Awesome Lists')}}">Description</a>
-            </div>
-          </div>
-          <div class="i-description">
-            <div class="d-text"><div class="small-title">Idea</div>When Wunderlist was bought by Microsoft and subsequently removed from the PlayStore, it left a gap that was not filled up until recently. There were no user-friendly applications available. I used to share lists with my family, but we stopped doing it because they found other applications unpractical. At the same time, I wanted to learn how to create Single Page Applications with React, so I began working on this small project during my free time. That is, a simple-to-use ToDo list application.</div>
-            <div class="d-text"><div class="small-title">Technology Stack</div>React, Node.js, Express, GraphQL, MongoDB, Apollo Server</div>
-            <div class="d-text"><div class="small-title">Challenges</div>At the beginning, working with web components was a breeze: designing the application with isolated components felt like a great idea. However, complexities quickly arised when trying to exchange data or functions between components. Luckily, there is a vast amount of resources online to learn the most difficult aspects of working with React. Another tough spot was working with GraphQL, since this query language fails sometimes in telling you the source of an error. To solve this type of errors, I needed a great deal of trial and error. Nevertheless, working with GraphQL became much easier after learning the most common causes of errors and how to solve them.<br>Another aspect of working with React that is usually challenging, is state management. However, I employed the new version of Apollo Server for this application. I was able to use its new feature, Reactive Variables, which made the process of managing the app's state much simpler and straightforward.</div>
-          </div>
-        </div>
-        <div class="p-item">
-          <div class="i-contents">
             <img src="/src/assets/extra.webp">
             <div class="p-t-title">Distribuidora Extra</div>
             <div class="p-buttons">
@@ -156,6 +140,38 @@ export class Projects extends LitElement {
             <div class="d-text"><div class="small-title">Idea</div>In 2020 I was in Liverpool, waiting for my wife to finish her studies. The pandemic hit in March so I was pretty much stuck there. I decided to spend my time by working in an idea I already had: creating a social network for entrepreneurs so they can collaborate, exchange useful information and help each other achieve their goals.</div>
             <div class="d-text"><div class="small-title">Technology Stack</div>Node.js, Express, MongoDB, RESTful</div>
             <div class="d-text"><div class="small-title">Challenges</div>From the beginning my intention was to create a Minimum Viable Product that would work in the real-world. Consequently, I designed every functionality with great detail taking into consideration its easy of use, security, and reliability. The functionalities were, at the same time, numerous and diverse in nature. To have a Minimum Viable Product, I had to add several functionalities such as user authentication, password recovery, password change, profile editing, sharing of information, posts editing, commenting, bookmarking, reporting of offensive content, among others.<br>However, the biggest challenge I found was when I deployed my application and began receiving feedback: I soon realized that I needed to design a much more complex application in order to gain traction. Entrepreneurs can already exhange information with great ease at social networks like Reddit, Twitter or Quora. In order to offer a differentiated product, I needed to create an ecosystem with the other functionalities I had in mind. That, however, takes time, which I hope to have someday.</div>
+          </div>
+        </div>
+        <div class="p-item">
+          <div class="i-contents">
+            <img src="/src/assets/lists.PNG">
+            <div class="p-t-title">Awesome Lists</div>
+            <div class="p-buttons">
+              <a class="p-button" href="https://github.com/daorhe2272/lists" target="_blank">GitHub</a>
+              <a class="p-button" @click="${() => {this.showMessage("Website Not Available", "This application has not been currently deployed and, therefore, is not available online.")}}">Website*</a>
+              <a class="p-button" @click="${() => {this.showDescription('Awesome Lists')}}">Description</a>
+            </div>
+          </div>
+          <div class="i-description">
+            <div class="d-text"><div class="small-title">Idea</div>When Wunderlist was bought by Microsoft and subsequently removed from the PlayStore, it left a gap that was not filled up until recently. There were no user-friendly applications available. I used to share lists with my family, but we stopped doing it because they found other applications unpractical. At the same time, I wanted to learn how to create Single Page Applications with React, so I began working on this small project during my free time. That is, a simple-to-use ToDo list application.</div>
+            <div class="d-text"><div class="small-title">Technology Stack</div>React, Node.js, Express, GraphQL, MongoDB, Apollo Server</div>
+            <div class="d-text"><div class="small-title">Challenges</div>At the beginning, working with web components was a breeze: designing the application with isolated components felt like a great idea. However, complexities quickly arised when trying to exchange data or functions between components. Luckily, there is a vast amount of resources online to learn the most difficult aspects of working with React. Another tough spot was working with GraphQL, since this query language fails sometimes in telling you the source of an error. To solve this type of errors, I needed a great deal of trial and error. Nevertheless, working with GraphQL became much easier after learning the most common causes of errors and how to solve them.<br>Another aspect of working with React that is usually challenging, is state management. However, I employed the new version of Apollo Server for this application. I was able to use its new feature, Reactive Variables, which made the process of managing the app's state much simpler and straightforward.</div>
+          </div>
+        </div>
+        <div class="p-item">
+          <div class="i-contents">
+            <img src="/src/assets/trello-clone.PNG">
+            <div class="p-t-title">Trello Clone</div>
+            <div class="p-buttons">
+              <a class="p-button" href="https://github.com/daorhe2272/trello-clone" target="_blank">GitHub</a>
+              <a class="p-button" @click="${() => {this.showMessage("Website Not Available", "This application has not been currently deployed and, therefore, is not available online.")}}">Website*</a>
+              <a class="p-button" @click="${() => {this.showDescription('Trello Clone')}}">Description</a>
+            </div>
+          </div>
+          <div class="i-description">
+            <div class="d-text"><div class="small-title">Idea</div>I wanted to learn how to use TypeScript in the context of React applications. I looked for inspiration online and found the idea of building a Trello Clone, so I put myself to work on it.</div>
+            <div class="d-text"><div class="small-title">Technology Stack</div>React, Node.js, TypeScript, Apollo Server</div>
+            <div class="d-text"><div class="small-title">Challenges</div>After the first initial confusion of using TypeScript for the first time, I was quickly able to grasp the most important concepts in this language and began coding with it successfully. It was not long before I realized why TypeScript, coupled with Visual Studio Code, is a much superior progamming language than JavaScript: the time spent catching errors is considerably diminished when done properly. I don't see myself going back to JavaScript any time soon!</div>
           </div>
         </div>
         <div class="p-item">

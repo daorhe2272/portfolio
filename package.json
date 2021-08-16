@@ -5,7 +5,8 @@
   "author": "do-portfolio",
   "license": "MIT",
   "scripts": {
-    "start": "web-dev-server"
+    "start": "web-dev-server",
+    "build": "rollup -c"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
